@@ -6,4 +6,5 @@ build
 .tmp
 xcommit.sh
 zsquash.sh
+index.js
 

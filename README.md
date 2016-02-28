@@ -18,7 +18,7 @@ That is the purpose of futurizer!!
 
 ### Futurize a callback-style function
 
-Example 1
+#### Example 1
 -----------
 
 ```js
@@ -41,7 +41,7 @@ hello('futurizer!!!!').fork(
 );
 ```
 
-Example 2
+#### Example 2
 -----------
 
 ```js
@@ -61,7 +61,7 @@ decode(read('README.md')).fork(
 
 ### Futurize a promise
 
-Example 1
+#### Example 1
 -----------
 
 ```js

@@ -1,15 +1,14 @@
 {
   "name": "futurizer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Turn callback-style functions or promises into futures",
   "main": "index.js",
   "author": "arcseldon",
   "license": "MIT",
-  "private": true,
   "scripts": {
     "clean": "./node_modules/.bin/rimraf index.js",
     "compile": "babel src/futurizer.js --out-file index.js",
-    "build": "npm run clean && npm run lint && npm run compile && npm run cov",
+    "build": "npm run clean && npm run lint && npm run compile && npm run coverage",
     "test": "./node_modules/.bin/mocha src/futurizerTests.js --harmony_shipping --es_staging --colors -u bdd -R spec --bail",
     "coverage": "node --harmony_shipping --es_staging node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- src/futurizerTests.js -R spec || true",
     "lint": "./node_modules/.bin/eslint --fix src/**/*.js || true",
@@ -47,8 +46,7 @@
   ],
   "homepage": "https://github.com/arcseldon/futurizer#readme",
   "dependencies": {
-    "data.task": "^3.0.0",
-    "ramda": "^0.19.1"
+    "data.task": "^3.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",
@@ -60,7 +58,6 @@
     "mocha": "^2.4.5",
     "q": "^1.4.1",
     "rimraf": "^2.5.2",
-    "sinon": "^1.17.3",
     "watch": "^0.17.1"
   }
 }
