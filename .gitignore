@@ -1,0 +1,9 @@
+.env
+npm-debug.log
+node_modules
+coverage
+build
+.tmp
+xcommit.sh
+zsquash.sh
+

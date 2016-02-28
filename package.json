@@ -1,0 +1,66 @@
+{
+  "name": "futurizer",
+  "version": "1.0.0",
+  "description": "Turn callback-style functions or promises into futures",
+  "main": "index.js",
+  "author": "arcseldon",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "clean": "./node_modules/.bin/rimraf index.js",
+    "compile": "babel src/futurizer.js --out-file index.js",
+    "build": "npm run clean && npm run lint && npm run compile && npm run cov",
+    "test": "./node_modules/.bin/mocha src/futurizerTests.js --harmony_shipping --es_staging --colors -u bdd -R spec --bail",
+    "coverage": "node --harmony_shipping --es_staging node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- src/futurizerTests.js -R spec || true",
+    "lint": "./node_modules/.bin/eslint --fix src/**/*.js || true",
+    "watch:compile": "npm run compile -- --watch",
+    "watch:test": "npm run test -- --watch -R min",
+    "watch:lint": "watch 'npm run lint' .",
+    "prepublish": "npm run compile",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags && npm run clean",
+    "minor-release": "npm version minor && npm publish && git push --follow-tags && npm run clean",
+    "major-release": "npm version major && npm publish && git push --follow-tags && npm run clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arcseldon/futurizer.git"
+  },
+  "keywords": [
+    "future",
+    "task",
+    "promise",
+    "monad"
+  ],
+  "eslintConfig": {
+    "env": {
+      "browser": false,
+      "node": true,
+      "mocha": true,
+      "es6": true
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/arcseldon/futurizer/issues"
+  },
+  "files": [
+    "index.js"
+  ],
+  "homepage": "https://github.com/arcseldon/futurizer#readme",
+  "dependencies": {
+    "data.task": "^3.0.0",
+    "ramda": "^0.19.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "chai": "^3.5.0",
+    "eslint": "^2.2.0",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5",
+    "q": "^1.4.1",
+    "rimraf": "^2.5.2",
+    "sinon": "^1.17.3",
+    "watch": "^0.17.1"
+  }
+}
