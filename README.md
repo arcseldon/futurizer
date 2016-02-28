@@ -3,17 +3,21 @@ futurizer
 
 [![build status](https://img.shields.io/travis/arcseldon/futurizer/master.svg?style=flat-square)](https://travis-ci.org/arcseldon/futurizer)
 [![npm version](https://img.shields.io/npm/v/futurizer.svg?style=flat-square)](https://www.npmjs.com/package/futurizer)
-[![codecov.io](https://codecov.io/github/arcseldon/futurizer/coverage.svg?branch=master)](https://codecov.io/github/arcseldon/futurizer?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/arcseldon/futurizer/badge.svg?branch=master)](https://coveralls.io/github/arcseldon/futurizer?branch=master)
 
 > Turn callback-style functions or promises into futures!!
 
-This library is opinionated about its Future implementation. Internally, uses [Folktale data.task](https://github.com/folktale/data.task) for Future implementation.
+This library is opinionated about its Future implementation. Internally, it uses [Folktale data.task](https://github.com/folktale/data.task).
 
-For an unopinionated library, please see [futurize](https://github.com/stoeffel/futurize) which heavily inspired this
-opinionated library.
+For an unopinionated library, please see [futurize](https://github.com/stoeffel/futurize) which is an excellent library, supports any
+ compatible implementation of Future, and HEAVILY inspired this library.
 
-Wanted reduced import boilerplate, and the most stable Future implementation available today out of the box.
-That is the purpose of futurizer!!
+Benefits of being opinionated are that this library ensures you are using a proven, production grade Future implementation, and makes
+import / require statements a breeze.
+
+Please see simple examples below demonstrating usage. Futures are pure - for a great introduction, watch this [video](https://vimeo.com/106008027?ref=tw-share)
+
+Once you see the convenience and power of Futures it will redefine how you approach asynchronous functional programming (in JavaScript) for many situations.
 
 
 ### Futurize a callback-style function
