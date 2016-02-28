@@ -1,6 +1,6 @@
 {
   "name": "futurizer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Turn callback-style functions or promises into futures",
   "main": "index.js",
   "author": "arcseldon",
